@@ -34,14 +34,14 @@ def enhance_image(img, new_width=400):
     img = img.resize((new_width, new_height), Image.LANCZOS)
 
     # Enhance
-    img = ImageEnhance.Sharpness(img).enhance(1.5)
+    img = ImageEnhance.Sharpness(img).enhance(1.2)
     img = ImageEnhance.Brightness(img).enhance(1.2)
     img = ImageEnhance.Contrast(img).enhance(1.3)
 
     return img
 
 if __name__ == '__main__':
-    pdf_path = "../books/Lecture note on EEE 402.pdf"
+    pdf_path = "../books/Chapter 3_Energy Story_EEE 403.1.pdf"
     pdf_name = os.path.splitext(os.path.basename(pdf_path))[0].replace(" ", "_")  # Make it filename-safe
     image_output_dir = f"pages/{pdf_name}"
 
