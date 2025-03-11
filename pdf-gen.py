@@ -20,7 +20,7 @@ def pdf_to_jpeg_with_enhancements(pdf_path, output_dir):
         enhanced_image = enhance_image(page)
 
         try:
-            enhanced_image.save(output_file, 'JPEG', optimize=True, quality=200, progressive=True)
+            enhanced_image.save(output_file, 'JPEG',  quality=100)
             print(f'Saved: {output_file}')
         except Exception as e:
             print(f"Error saving image: {e}")
@@ -34,9 +34,9 @@ def enhance_image(img, new_width=400):
     img = img.resize((new_width, new_height), Image.LANCZOS)
 
     # Enhance
-    img = ImageEnhance.Sharpness(img).enhance(2.0)
+    img = ImageEnhance.Sharpness(img).enhance(1.5)
     img = ImageEnhance.Brightness(img).enhance(1.2)
-    img = ImageEnhance.Contrast(img).enhance(1.5)
+    img = ImageEnhance.Contrast(img).enhance(1.3)
 
     return img
 
