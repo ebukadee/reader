@@ -20,7 +20,7 @@ def pdf_to_jpeg_with_enhancements(pdf_path, output_dir):
         enhanced_image = enhance_image(page)
 
         try:
-            enhanced_image.save(output_file, 'JPEG', optimize=True, quality=200, progressive=True)
+            enhanced_image.save(output_file, 'JPEG', optimize=True, quality=40, progressive=True)
             print(f'Saved: {output_file}')
         except Exception as e:
             print(f"Error saving image: {e}")
