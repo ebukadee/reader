@@ -20,12 +20,12 @@ def pdf_to_jpeg_with_enhancements(pdf_path, output_dir):
         enhanced_image = enhance_image(page)
 
         try:
-            enhanced_image.save(output_file, 'JPEG', optimize=True, quality=50, progressive=True)
+            enhanced_image.save(output_file, 'JPEG',  quality=100)
             print(f'Saved: {output_file}')
         except Exception as e:
             print(f"Error saving image: {e}")
 
-def enhance_image(img, new_width=500):
+def enhance_image(img, new_width=900):
     img = img.convert('RGB')
 
     # Resize while maintaining aspect ratio
@@ -41,7 +41,7 @@ def enhance_image(img, new_width=500):
     return img
 
 if __name__ == '__main__':
-    pdf_path = "../books/Chapter 3_Energy Story_EEE 403.1.pdf"
+    pdf_path = "../books/EEE 404.1 DR OGBONNA MATERIAL .pdf"
     pdf_name = os.path.splitext(os.path.basename(pdf_path))[0].replace(" ", "_")  # Make it filename-safe
     image_output_dir = f"pages/{pdf_name}"
 
