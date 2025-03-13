@@ -18,9 +18,9 @@ def enhance_and_compress_images(input_folder, new_width=500, quality=80):
                 new_height = int(float(img.height) * w_percent)
                 img = img.resize((new_width, new_height), Image.LANCZOS)
 
-                img = ImageEnhance.Sharpness(img).enhance(1.1)  # Sharpen
-                img = ImageEnhance.Brightness(img).enhance(1.2)  # Brighten
-                img = ImageEnhance.Contrast(img).enhance(1.3)  # Increase contrast
+                # img = ImageEnhance.Sharpness(img).enhance(1.1)  # Sharpen
+                # img = ImageEnhance.Brightness(img).enhance(1.2)  # Brighten
+                # img = ImageEnhance.Contrast(img).enhance(1.3)  # Increase contrast
 
                 # Save with compression
                 img.save(output_path, 'JPEG', optimize=True, quality=quality, progressive=True)
