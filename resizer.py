@@ -31,5 +31,5 @@ def enhance_and_compress_images(input_folder, new_width=400, quality=90):
                 print(f"Error processing {filename}: {e}")
 
 # Example usage
-input_folder = "C:/Users/steezeless/Desktop/reader/pages/EEE_405"  # Change to your folder containing images
+input_folder = "C:/Users/steezeless/Desktop/reader/pages/EEE405.1_DR_OGBONNA_MATERIAL_"  # Change to your folder containing images
 enhance_and_compress_images(input_folder)
