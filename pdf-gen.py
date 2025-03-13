@@ -35,8 +35,8 @@ def enhance_image(img, new_width=900):
 
     # Enhance
     img = ImageEnhance.Sharpness(img).enhance(1.2)
-    img = ImageEnhance.Brightness(img).enhance(1.2)
-    img = ImageEnhance.Contrast(img).enhance(1.3)
+    img = ImageEnhance.Brightness(img).enhance(1.1)
+    img = ImageEnhance.Contrast(img).enhance(1.2)
 
     return img
 
