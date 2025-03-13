@@ -44,6 +44,6 @@ def split_pdf_pages(pdf_path, output_folder):
             print(f"Saved: {output_path}")
             page_number += 1
 
-input_folder = "C:/Users/steezeless/Desktop/books/EEE 405.pdf"  # Replace with your folder path
+input_folder = "C:/Users/steezeless/Desktop/books/EEE405.1 DR OGBONNA MATERIAL .pdf"  # Replace with your folder path
 output_folder = "C:/Users/steezeless/Desktop/oblee"
 split_pdf_pages(input_folder, output_folder)
