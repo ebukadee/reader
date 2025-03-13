@@ -1,7 +1,7 @@
 from PIL import Image, ImageEnhance
 import os
 
-def enhance_and_compress_images(input_folder, new_width=500, quality=80):
+def enhance_and_compress_images(input_folder, new_width=400, quality=90):
     if not os.path.exists(input_folder):
         os.makedirs(input_folder)
 
