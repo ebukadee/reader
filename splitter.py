@@ -47,8 +47,8 @@ def split_pdf_pages(pdf_path, output_folder, max_width, max_height, quality=90):
             print(f"Saved: {output_path}")
             page_number += 1
 
-input_folder = "C:/Users/steezeless/Desktop/books/EEE 404.1 DR OGBONNA MATERIAL .pdf"  # Replace with your folder path
-output_folder = "C:/Users/steezeless/Desktop/oblee"
-max_width = 600  # Replace with your desired max width
+input_folder = "C:/Users/steezeless/Desktop/books/400 Level/EEE 401 Material (Dr. Esosa_s Part).pdf"  # Replace with your folder path
+output_folder = "C:/Users/steezeless/Desktop/reader/pages/EEE_401_Material_(Dr. Esosa_s Part)"
+max_width = 500  # Replace with your desired max width
 max_height = 800  # Replace with your desired max height
 split_pdf_pages(input_folder, output_folder, max_width, max_height)
