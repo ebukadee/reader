@@ -18,7 +18,7 @@ def pdf_to_jpeg_with_enhancements(pdf_path, output_dir):
         output_file = os.path.join(output_dir, f'page_{i}.jpg')
         enhanced_image = enhance_image(page)
         try:
-            enhanced_image.save(output_file, 'JPEG', optimize=True, quality=100, progressive=True)
+            enhanced_image.save(output_file, 'JPEG', optimize=True, quality=90, progressive=True)
             print(f'Saved: {output_file}')
         except Exception as e:
             print(f"Error saving image: {e}")
@@ -32,7 +32,7 @@ def enhance_image(img, new_width=470):
     img = img.resize((new_width, new_height), Image.LANCZOS)
     # img = ImageEnhance.Sharpness(img).enhance(1.2)
     # img = ImageEnhance.Brightness(img).enhance(1.3)
-    img = ImageEnhance.Contrast(img).enhance(1.2)
+    # img = ImageEnhance.Contrast(img).enhance(1.2)
     return img
 
 def update_index_html(output_dirs):
@@ -87,5 +87,5 @@ def process_pdfs(pdf_folder_or_file):
         update_index_html(output_dirs)
 
 if __name__ == '__main__':
-    pdf_folder_or_file = "C:/Users/steezeless/Desktop/books/EEE 402/"
+    pdf_folder_or_file = "C:/Users/steezeless/Desktop/books/ENG 401/"
     process_pdfs(pdf_folder_or_file)
