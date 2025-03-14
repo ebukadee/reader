@@ -87,5 +87,5 @@ def process_pdfs(pdf_folder_or_file):
         update_index_html(output_dirs)
 
 if __name__ == '__main__':
-    pdf_folder_or_file = "C:/Users/steezeless/Desktop/books/ass and ans/EEE 404.1 ASSIGNMENT AND ANSWERS.pdf"
+    pdf_folder_or_file = "C:/Users/steezeless/Desktop/books/ass and ans/ENG 401 ASSIGNMENT AND ANSWERS.pdf"
     process_pdfs(pdf_folder_or_file)
