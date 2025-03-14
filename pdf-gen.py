@@ -18,7 +18,7 @@ def pdf_to_jpeg_with_enhancements(pdf_path, output_dir):
         output_file = os.path.join(output_dir, f'page_{i}.jpg')
         enhanced_image = enhance_image(page)
         try:
-            enhanced_image.save(output_file, 'JPEG', optimize=True, quality=90, progressive=True)
+            enhanced_image.save(output_file, 'JPEG', optimize=True, quality=100, progressive=True)
             print(f'Saved: {output_file}')
         except Exception as e:
             print(f"Error saving image: {e}")
@@ -87,5 +87,5 @@ def process_pdfs(pdf_folder_or_file):
         update_index_html(output_dirs)
 
 if __name__ == '__main__':
-    pdf_folder_or_file = "C:/Users/steezeless/Desktop/books/ENG 401/"
+    pdf_folder_or_file = "C:/Users/steezeless/Desktop/books/ass and ans/EEE 404.1 ASSIGNMENT AND ANSWERS.pdf"
     process_pdfs(pdf_folder_or_file)
