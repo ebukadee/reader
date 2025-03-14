@@ -41,7 +41,7 @@ def enhance_image(img, new_width=450):
     return img
 
 if __name__ == '__main__':
-    pdf_path = "../books/400 Level/EEE 401 Exam Guide.pdf"
+    pdf_path = "../books/400 Level/EEE 402 note.pdf"
     pdf_name = os.path.splitext(os.path.basename(pdf_path))[0].replace(" ", "_")  # Make it filename-safe
     image_output_dir = f"pages/{pdf_name}"
 
