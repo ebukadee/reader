@@ -57,7 +57,7 @@ def update_index_html(output_dirs):
         <body>
             <div>
                 <ul>
-        """ + "\n".join(links) + """
+        """ + "/n".join(links) + """
                 </ul>
             </div>
         </body>
@@ -87,5 +87,5 @@ def process_pdfs(pdf_folder_or_file):
         update_index_html(output_dirs)
 
 if __name__ == '__main__':
-    pdf_folder_or_file = "C:/Users/steezeless/Desktop/books/ass and ans/ENG 401 ASSIGNMENT AND ANSWERS.pdf"
+    pdf_folder_or_file = "C:/Users/steezeless/Documents/Pacento ENG 401 NOTE.pdf"
     process_pdfs(pdf_folder_or_file)
